@@ -1,0 +1,202 @@
+
+import Localize from "service/localize";
+
+//challenge
+const SHOW = {
+    SHOW: 2,
+    SHOW_BY_TIME: 1,
+}
+const SHOW_PARSE = {
+    [SHOW.SHOW]: Localize.getLocalize("LC_FIXED"),
+    [SHOW.SHOW_BY_TIME]: Localize.getLocalize("LC_DURATION"),
+}
+const CHALLENGE_TYPE = {
+    WRITE_POST: 1,
+    CHALLENGE_CHAIN: 2,
+    SUB_CHALLENGE: 3
+}
+const CHALLENGE_TYPE_PARSE = {
+    [CHALLENGE_TYPE.WRITE_POST]: Localize.getLocalize("LC_CHALLENGE_POST"),
+    [CHALLENGE_TYPE.CHALLENGE_CHAIN]: Localize.getLocalize("LC_CHALLENGE_SERIES"),
+    // [CHALLENGE_TYPE.SUB_CHALLENGE]: "Thử thách con"
+}
+const STATUS = {
+    ALL: -1,
+    NEW: 1,
+    START: 2,
+    FINISHED: 3,
+    RESULT: 4,
+    APPLY: 5
+}
+
+const STATUS_PARSE = {
+    [STATUS.ALL]: Localize.getLocalize("LC_ALL"),
+    [STATUS.NEW]: Localize.getLocalize("LC_STATUS_DRAFT"),
+    [STATUS.START]: Localize.getLocalize("LC_STATUS_HAPPENING"),
+    [STATUS.FINISHED]: Localize.getLocalize("LC_STATUS_FINISHED"),
+    [STATUS.RESULT]: Localize.getLocalize("LC_STATUS_HAD_RESULT"),
+    [STATUS.APPLY]: Localize.getLocalize("LC_APPLY"),
+}
+//list submission
+const SOCIAL_SUBMISSION_VALID = {
+    ALL: -1,
+    INVALID: 0,
+    VALID: 1
+}
+const SOCIAL_SUBMISSION_VALID_PARSE = {
+    // [SOCIAL_SUBMISSION_VALID.ALL]: "Tất cả",
+    // [SOCIAL_SUBMISSION_VALID.INVALID]: "Không hợp lệ ",
+    // [SOCIAL_SUBMISSION_VALID.VALID]: "Hợp lệ"
+}
+// userChallenge
+const USER_CHALLENGE_STATUS = {
+    ALL: -1,
+    JOINED: 1,
+    COMPLETE: 2,
+    UNDER_REVIEW: 7
+}
+const USER_CHALLENGE_STATUS_PARSE = {
+    [USER_CHALLENGE_STATUS.ALL]: Localize.getLocalize("LC_ALL"),
+    [USER_CHALLENGE_STATUS.JOINED]: Localize.getLocalize("LC_STATUS_CHECKED"),
+    [USER_CHALLENGE_STATUS.COMPLETE]: Localize.getLocalize("LC_STATUS_CHECKED"),
+    [USER_CHALLENGE_STATUS.UNDER_REVIEW]: Localize.getLocalize("LC_STATUS_WAIT_TO_TEST"),
+}
+
+
+const USER_CHALLENGE_RANK_STATUS = {
+    SUCCESS: 1,
+    FAILED: 2
+}
+const USER_CHALLENGE_RANK_STATUS_PARSE = {
+    [USER_CHALLENGE_RANK_STATUS.SUCCESS]: Localize.getLocalize("LC_WINNER"),
+    [USER_CHALLENGE_RANK_STATUS.FAILED]: Localize.getLocalize("LC_NOT_WINNER"),
+
+}
+const USER_CHALLENGE_POST_STATUS = {
+    ALL: -1,
+    JOINED: 1,
+    COMPLETE: 2,
+    RANKED: 6
+}
+const USER_CHALLENGE_POST_STATUS_PARSE = {
+    [USER_CHALLENGE_POST_STATUS.ALL]: Localize.getLocalize("LC_ALL"),
+    [USER_CHALLENGE_POST_STATUS.JOINED]: Localize.getLocalize("LC_STATUS_WAIT_TO_TEST"),
+    [USER_CHALLENGE_POST_STATUS.RANKED]: Localize.getLocalize("LC_STATUS_RANKED"),
+}
+const USER_CHALLENGE_MISSION_STATUS = {
+    ALL: -1,
+    UNCOMPLETED: 1,
+    COMPLETED: 2,
+    UNDER_REVIEW: 3,
+    REJECTED: 4,
+    COMPLETED_ALL: 5
+}
+const USER_CHALLENGE_MISSION_STATUS_PARSE = {
+    [USER_CHALLENGE_MISSION_STATUS.ALL]: Localize.getLocalize("LC_ALL"),
+    [USER_CHALLENGE_MISSION_STATUS.UNCOMPLETED]: Localize.getLocalize("LC_STATUS_NOT_COMPLETE"),
+    [USER_CHALLENGE_MISSION_STATUS.COMPLETED]: Localize.getLocalize("LC_STATUS_COMPLETE"),
+    [USER_CHALLENGE_MISSION_STATUS.UNDER_REVIEW]: Localize.getLocalize("LC_STATUS_WAIT_TO_TEST"),
+    [USER_CHALLENGE_MISSION_STATUS.REJECTED]: "Từ Chối ",
+    [USER_CHALLENGE_MISSION_STATUS.COMPLETED_ALL]: "Tất cả hoàn thành",
+}
+//subChallenge
+const SUB_CHALLENGE_STATUS = {
+    ALL: -1,
+    DRAFT: 1,
+    APPLY: 5
+}
+const SUB_CHALLENGE_STATUS_PARSE = {
+    [SUB_CHALLENGE_STATUS.ALL]: Localize.getLocalize("LC_ALL"),
+    [SUB_CHALLENGE_STATUS.DRAFT]: Localize.getLocalize("LC_DRAFT"),
+    [SUB_CHALLENGE_STATUS.APPLY]: Localize.getLocalize("LC_APPLY"),
+}
+//mission
+const MISSION_TYPE = {
+    ACTION: 1,
+    WATER: 2,
+    QUESTION_AND_ANSWER: 3,
+    CLIP_OR_PIC: 4,
+    BMI: 5
+}
+const MISSION_TYPE_PARSE = {
+    [MISSION_TYPE.ACTION]: Localize.getLocalize("LC_CHECKLIST"),
+    [MISSION_TYPE.WATER]: Localize.getLocalize("LC_DRINK_WATER"),
+    [MISSION_TYPE.QUESTION_AND_ANSWER]: Localize.getLocalize("LC_MCQ"),
+    [MISSION_TYPE.CLIP_OR_PIC]: Localize.getLocalize("LC_TAKE_PICTURE"),
+    [MISSION_TYPE.BMI]: Localize.getLocalize("LC_BMI")
+}
+const MISSION_RESULT_TYPE = {
+    MANUAL: 1,
+    AUTO: 2,
+
+}
+const MISSION_RESULT_TYPE_PARSE = {
+    [MISSION_RESULT_TYPE.MANUAL]: Localize.getLocalize("LC_MANUAL"),
+    [MISSION_RESULT_TYPE.AUTO]: Localize.getLocalize("LC_AUTO"),
+}
+
+const MISSION_QUESTION_RESULT = {
+    FALSE: 0,
+    TRUE: 1
+
+}
+const MISSION_QUESTION_RESULT_PARSE = {
+    [MISSION_QUESTION_RESULT.FALSE]: Localize.getLocalize("LC_WRONG"),
+    [MISSION_QUESTION_RESULT.TRUE]: Localize.getLocalize("LC_CORRECT"),
+}
+
+const CHALLENGE_NOTIFICATION_TYPE = {
+    ALL: 1,
+    PARTICIPANT: 2
+
+}
+const CHALLENGE_NOTIFICATION_TYPE_PARSE = {
+    [CHALLENGE_NOTIFICATION_TYPE.ALL]: Localize.getLocalize("LC_ALL"),
+    [CHALLENGE_NOTIFICATION_TYPE.PARTICIPANT]: Localize.getLocalize("LC_PARTICIPANT"),
+}
+
+const RESULT_TYPE = {
+    MANUAL: 1,
+    AUTO: 2
+}
+
+const RESULT_TYPE_PARSE = {
+    [RESULT_TYPE.MANUAL]: Localize.getLocalize("LC_MANUAL"),
+    [RESULT_TYPE.AUTO]: Localize.getLocalize("LC_AUTO"),
+}
+
+
+class ChallengeEnum {
+    static get STATUS() { return STATUS }
+    static get STATUS_PARSE() { return STATUS_PARSE }
+    static get SHOW() { return SHOW }
+    static get SHOW_PARSE() { return SHOW_PARSE }
+    static get USER_CHALLENGE_STATUS() { return USER_CHALLENGE_STATUS }
+    static get USER_CHALLENGE_STATUS_PARSE() { return USER_CHALLENGE_STATUS_PARSE }
+    static get USER_CHALLENGE_POST_STATUS() { return USER_CHALLENGE_POST_STATUS }
+    static get USER_CHALLENGE_POST_STATUS_PARSE() { return USER_CHALLENGE_POST_STATUS_PARSE }
+    static get SOCIAL_SUBMISSION_VALID() { return SOCIAL_SUBMISSION_VALID }
+    static get SOCIAL_SUBMISSION_VALID_PARSE() { return SOCIAL_SUBMISSION_VALID_PARSE }
+    static get CHALLENGE_TYPE() { return CHALLENGE_TYPE }
+    static get CHALLENGE_TYPE_PARSE() { return CHALLENGE_TYPE_PARSE }
+    static get SUB_CHALLENGE_STATUS() { return SUB_CHALLENGE_STATUS }
+    static get SUB_CHALLENGE_STATUS_PARSE() { return SUB_CHALLENGE_STATUS_PARSE }
+    static get MISSION_TYPE() { return MISSION_TYPE }
+    static get MISSION_TYPE_PARSE() { return MISSION_TYPE_PARSE }
+    static get MISSION_RESULT_TYPE() { return MISSION_RESULT_TYPE }
+    static get MISSION_RESULT_TYPE_PARSE() { return MISSION_RESULT_TYPE_PARSE }
+    static get MISSION_QUESTION_RESULT() { return MISSION_QUESTION_RESULT }
+    static get MISSION_QUESTION_RESULT_PARSE() { return MISSION_QUESTION_RESULT_PARSE }
+    static get USER_CHALLENGE_MISSION_STATUS() { return USER_CHALLENGE_MISSION_STATUS }
+    static get USER_CHALLENGE_MISSION_STATUS_PARSE() { return USER_CHALLENGE_MISSION_STATUS_PARSE }
+    static get CHALLENGE_NOTIFICATION_TYPE() { return CHALLENGE_NOTIFICATION_TYPE }
+    static get CHALLENGE_NOTIFICATION_TYPE_PARSE() { return CHALLENGE_NOTIFICATION_TYPE_PARSE }
+    static get RESULT_TYPE() { return RESULT_TYPE }
+    static get RESULT_TYPE_PARSE() { return RESULT_TYPE_PARSE }
+    static get USER_CHALLENGE_RANK_STATUS() { return USER_CHALLENGE_RANK_STATUS }
+    static get USER_CHALLENGE_RANK_STATUS_PARSE() { return USER_CHALLENGE_RANK_STATUS_PARSE }
+
+
+}
+
+export default ChallengeEnum

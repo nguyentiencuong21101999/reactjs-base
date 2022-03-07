@@ -1,0 +1,195 @@
+{
+  "port": "9000",
+  "log": [
+    "info",
+    "debug",
+    "warn",
+    "error",
+    "log",
+    "table",
+    "trace"
+  ],
+  "api": {
+    "host": "https://api.meiji.dev.intelin.vn/api/",
+    "login": "admin/login",
+    "admin": {
+      "list": "admin/manageAdmin/getAll",
+      "create": "admin/manageAdmin/createAdminTemp",
+      "info": "admin/manageAdmin/info",
+      "banAccount": "admin/manageAdmin/ban",
+      "unbanAccount": "admin/manageAdmin/unBan",
+      "post": {
+        "_": "admin/post",
+        "target": "admin/post/target",
+        "list": "admin/post/list"
+      },
+      "password": {
+        "reset": "admin/manageAdmin/requestResetPassword",
+        "forgotNotActive": "admin/manageAdmin/requestResetPassword"
+      }
+    },
+    "user": {
+      "list": "admin/manageUser/getAll",
+      "banAccount": "admin/manageUser/ban",
+      "unbanAccount": "admin/manageUser/unBan"
+    },
+    "resource": "static/admin",
+    "password": {
+      "reset": "admin/resetPassword"
+    },
+    "profile": "admin/profile"
+  },
+  "rsaKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0+B5KsZ/Q4c252WDMHVf4TPtoWwfTiikKu7NGkGaleBWZbDTyql4Cxf6aTMrIyqfYShGCVFWhJgNSmAbqkzvRr9BJVbyTVXppbTbeCKplpFso6IoMBXMizq3P+5VyvS+YFhPrCzDv5iFvMgnmkjlRm3rUZ0Nd22UdIh1Rvb3A/AnnzHR1PEqyYaS4/kzHgwKO0H404QTTA8Js67pA/WC4Bv/6fnE/GXMwsoWzZXwPeofSBkXFNsj2nrXROUfDzUmUQaMZT4monOt1ihzyRiF7+yHk6jmtFNU8KgrX2rnkqtpSCl524zFR9fztZplq2VqvpuefQNuBy3y5Ss1EnY24wIDAQAB",
+  "request": {
+    "timeout": 30000,
+    "success": 350
+  },
+  "localize": {
+    "current": "vn",
+    "language": [
+      {
+        "key": "vn",
+        "text": "LYT_LANG_VIE",
+        "code": "VN",
+        "separator": ".",
+        "decimal": ",",
+        "decimals": 0,
+        "convertAmountToText": "convertAmountToText_vn",
+        "testId": "subnavVN"
+      },
+      {
+        "key": "en",
+        "text": "LYT_LANG_ENG",
+        "code": "GB",
+        "separator": ",",
+        "decimal": ".",
+        "decimals": 2,
+        "convertAmountToText": "convertAmountToText_en",
+        "testId": "subnavEN"
+      }
+    ]
+  },
+  "api2": {
+    "host": "https://api2.meiji.dev.intelin.vn/",
+   
+    "admin": {
+
+      "settingPrize": {
+        "getListSettingPrize": "admin/reward",
+        "createSettingPrize": "admin/reward",
+        "updateSettingPrize": "admin/reward"
+      },
+      "menu": {
+        "getListCategory": "admin/menuCategory",
+        "getDetailCategory": "admin/menuCategory",
+        "createCategory": "admin/menuCategory",
+        "updateCategory": "admin/menuCategory",
+        "getListFood": "admin/food",
+        "getDetailFood": "admin/food",
+        "getList": "admin/subFoodAndClassification",
+        "createFood": "admin/food",
+        "updateFood": "admin/food",
+        "getListSetting": "admin/menuSetting",
+        "createMenuSetting": "admin/menuSetting",
+        "getDetailMenuSetting": "admin/menuSetting",
+        "updateMenuSetting": "admin/menuSetting",
+        "getListMenu": "admin/menuSettingDay",
+        "updateMenu": "admin/menuSettingDay",
+        "getListTarget": "admin/menuSettingTarget",
+        "createTarget": "admin/menuSettingTarget",
+        "updateTarget": "admin/menuSettingTarget"
+      },
+      "teachingPregnancy": {
+        "getListTeachingPregnancy": "admin/pregnancyPost",
+        "createTeachingPregnancy": "admin/pregnancyPost",
+        "getDetailTeachingPregnancy": "admin/pregnancyPost",
+        "updateTeachingPregnancy": "admin/pregnancyPost"
+      },
+      "setting": {
+        "getListSetting": "admin/config",
+        "updateSetting": "admin/config",
+        "getListBubble": "admin/bubble",
+        "createBubble": "admin/bubble",
+        "updateBubble": "admin/bubble"
+      },
+      "category": {
+        "getListCategory": "admin/category",
+        "createCategory": "admin/category",
+        "getDetailCategory": "admin/category",
+        "updateCategory": "admin/category"
+      },
+      "member": {
+        "getListMember": "admin/promotion/detail",
+        "getDetailMember": "admin/promotion/detail",
+        "getListHistory": "admin/promotion/detail"
+      },
+      "reward": {
+        "getListReward": "admin/promotion",
+        "getDetailReward": "admin/promotion",
+        "getListRequired": "admin/promotion/request",
+        "updateListRequest": "admin/promotion/request",
+        "applyReward": "admin/promotion/detail",
+        "createReward": "admin/promotion",
+        "updateReward": "admin/promotion"
+      },
+      "notification": {
+        "checkListDataImport": "admin/notificationFile",
+        "createNotification": "admin/notification",
+        "getListNotification": "admin/notificationDetail",
+        "getListNotificationReceived": "admin/userNotification"
+      },
+      "post": {
+        "sendNotificationPost": "admin/postNotification",
+        "getListCategoryAndChallenge":"admin/categoryAndChallenge"
+      },
+      "challenge": {
+        "create": "admin/challenge",
+        "getAllChallenge": "admin/detail",
+        "getListParticipant": "admin/detail",
+        "getListPostParticipant": "admin/userChallenge",
+        "getListPostParticipantMission": "admin/sub/detail",
+        "updateChallengePostResult": "admin/userChallenge",
+        "updateUserChallengeResult": "admin/userChallenge",
+        "updateChallenge": "admin/challenge",
+        "updateChallengeResult": "admin/challenge",
+        "getDetailChallenge": "admin/challenge",
+        "getDetailUserChallenge": "admin/userChallenge",
+        "updateUserChallengeMissionResult": "admin/missionDetail",
+        "applyChallenge": "admin/detail",
+        "endChallenge": "admin/sub/detail",
+        "sendNotificationChallenge": "admin/challengeNotification",
+        "updateUserChallengeRank": "admin/userChallengeRank"
+      },
+      "subChallenge": {
+        "getDetailChallengeChain": "admin/sub/detail",
+        "createSubChallenge": "admin/sub",
+        "getDetailSubChallenge": "admin/sub",
+        "updateSubChallenge": "admin/sub",
+        "removeSubChallenge": "admin/sub",
+        "approveSubChallenge": "admin/sub/detail",
+        "getListPostLink": "admin/post"
+      },
+      "mission": {
+        "createMission": "admin/mission",
+        "removeMission": "admin/missionDetail",
+        "getDetailMission": "admin/missionDetail",
+        "changePositionMission": "admin/mission"
+      },
+      "dashBoard": {
+        "getDetailDashBoard": "admin/dashboard"
+      }
+    }
+  },
+  "cookies": {
+    "expiredAt": "533010BDE7BC701AAAA405033E852A3A",
+    "auth": "335F6AA0500C432EE720BEB0A1F8D453",
+    "profile": "093EA6695078B2915DA17580B7D23C2B",
+    "role": "4C3BD96C6FF726EA7A58AB62BE835D10"
+  },
+  "localStorage": {
+    "language": "2536649f81098f739c4e4d3ef2b0a4cf"
+  },
+  "urlStatic": "https://static.intelin.vn",
+  "bucketVideo":"/meiji/video/"
+  
+}

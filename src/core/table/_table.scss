@@ -1,0 +1,526 @@
+//
+//.table-pagination {
+//  width: 100%;
+//  min-height: 24px;
+//  background: transparent;
+//  display: flex;
+//  justify-content: space-between;
+//
+//  .table-pagination-number {
+//    min-width: 168px;
+//    height: 100%;
+//    display: flex;
+//
+//    .table-pagination-number-box {
+//      width: 24px;
+//      min-height: 24px;
+//      display: flex;
+//      outline: none;
+//      cursor: pointer;
+//
+//      &:hover,
+//      &.table-pagination-number-box-active {
+//        border-radius: 50%;
+//        background-color: color(primary);
+//
+//        svg,
+//        p {
+//          color: #ffffff !important;
+//          font-weight: bold !important;
+//        }
+//      }
+//
+//      &.table-pagination-number-box-disabled {
+//        pointer-events: none;
+//        opacity: 0.5;
+//      }
+//
+//      svg,
+//      p {
+//        margin: auto;
+//      }
+//
+//      svg {
+//        color: rgba(0, 0, 0, 0.38);
+//      }
+//
+//      p {
+//        font-size: 13px;
+//        font-family: font(segoeui);
+//        line-height: 2;
+//        letter-spacing: 0.29px;
+//        text-align: left;
+//        color: rgba(0, 0, 0, 0.87);
+//      }
+//    }
+//  }
+//
+//  .table-pagination-item {
+//    min-width: 142px;
+//    height: 100%;
+//    display: flex;
+//
+//    .table-pagination-item-text,
+//    button>span {
+//      font-size: 13px;
+//      line-height: 2;
+//      letter-spacing: 0.29px;
+//      text-align: left;
+//      color: rgba(0, 0, 0, 0.87);
+//      font-family: font(segoeui);
+//    }
+//
+//    button {
+//      padding: 0;
+//
+//      span {
+//        svg {
+//          color: rgba(0, 0, 0, 0.38);
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.form-input-select-table-popover {
+//  div[class='MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded'] {
+//    // top: 56px !important;
+//
+//    ul {
+//      li {
+//        min-width: 80px;
+//        font-size: 13px;
+//        font-weight: 300;
+//        font-family: font(segoeui);
+//        min-height: 20px;
+//        color: rgba(0, 0, 0, 0.87);
+//
+//        &:hover {
+//          background: #f5f5f5;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.form-input-select-table-popover-active {
+//  background: #f5f5f5 !important;
+//}
+//
+//
+//.form-table-default {
+//  width: 100%;
+//  overflow: auto;
+//
+//  table {
+//    width: inherit;
+//    border-collapse: collapse;
+//    background-color: #fff;
+//    thead {
+//      tr {
+//        background-color: #E2E2E2;
+//        th {
+//          font-family: font(SF-Semibold);
+//          font-size: 14px;
+//          line-height: 19px;
+//          letter-spacing: 0.8px;
+//          padding: 22px 20px;
+//          min-height: 20px;
+//          color: #222;
+//          border: 1px solid #D6D6D6;
+//        }
+//      }
+//
+//    }
+//
+//    tbody {
+//      tr {
+//        outline: 0;
+//        // cursor: pointer;
+//
+//        &:hover {
+//          background-color: #D1CFFF;
+//        }
+//
+//        .no-hover:hover {
+//          background-color: inherit !important;
+//        }
+//
+//        //&:nth-child(even) {
+//        //  background-color: #ededed;
+//        //}
+//
+//        &:not(:first-child){
+//          td:not(:nth-child(2)){
+//            border-top: none;
+//          }
+//          td:nth-child(2){
+//            border-left: none;
+//            border-right: none;
+//          }
+//        }
+//
+//        &:first-child{
+//          td:nth-child(2){
+//            border-top: none;
+//            border-left: none;
+//            border-right: none;
+//          }
+//        }
+//
+//        &:last-child{
+//          td{
+//            border-bottom: none;
+//          }
+//          border-bottom: 1px solid #D6D6D6;
+//        }
+//
+//        td {
+//          font-size: 14px;
+//          letter-spacing: 0.7px;
+//          color: #222;
+//          padding: 22px 20px;
+//          border: 1px solid #D6D6D6;
+//
+//          &:nth-child(2){
+//            border-bottom: none;
+//          }
+//        }
+//      }
+//    }
+//  }
+//
+//  .text-center {
+//    text-align: center;
+//  }
+//
+//  .text-left {
+//    text-align: left;
+//  }
+//
+//  .text-right {
+//    text-align: right;
+//  }
+//
+//  @media (max-width: 1024px){
+//    /* Force table to not be like tables anymore */
+//    table:not(.list-card), table:not(.list-card) thead, table:not(.list-card) tbody, table:not(.list-card) th, table:not(.list-card) td, table:not(.list-card) tr {
+//      display: block;
+//    }
+//
+//    /* Hide table headers (but not display: none;, for accessibility) */
+//    table:not(.list-card) thead tr {
+//      position: absolute;
+//      top: -9999px;
+//      left: -9999px;
+//    }
+//
+//    // tr {
+//    //   margin: 0 0 1rem 0;
+//    // }
+//
+//    table:not(.list-card){
+//      tbody{
+//        tr{
+//          td {
+//            /* Behave  like a "row" */
+//            border: none;
+//            border-bottom: 1px solid #eee;
+//            position: relative;
+//            padding-left: 230px;
+//            text-align: left;
+//          }
+//
+//          td:before {
+//            /* Now like a table header */
+//            position: absolute;
+//            /* Top/left values mimic padding */
+//            // top: 0;
+//            left: 6px;
+//            width: 5%;
+//            padding-right: 10px;
+//            white-space: nowrap;
+//            /*
+//            Label the data
+//            You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+//            */
+//            content: attr(data-label);
+//            font-family: font(SF-Semibold);
+//          }
+//
+//
+//          td:first-child {
+//            background: #E2E2E2;
+//          }
+//        }
+//      }
+//    }
+//
+//    table:not(.list-card) .text-center {
+//      padding-left: 0;
+//    }
+//  }
+//}
+
+// .table-pagination {
+//   width: 100%;
+//   min-height: 24px;
+//   background: transparent;
+//   display: flex;
+//   justify-content: space-between;
+
+//   .table-pagination-number {
+//     min-width: 168px;
+//     height: 100%;
+//     display: flex;
+
+//     .table-pagination-number-box {
+//       width: 24px;
+//       min-height: 24px;
+//       display: flex;
+//       outline: none;
+//       cursor: pointer;
+
+//       &:hover,
+//       &.table-pagination-number-box-active {
+//         border-radius: 50%;
+//         background-color: color(primary);
+
+//         svg,
+//         p {
+//           color: #ffffff !important;
+//           font-weight: bold !important;
+//         }
+//       }
+
+//       &.table-pagination-number-box-disabled {
+//         pointer-events: none;
+//         opacity: 0.5;
+//       }
+
+//       svg,
+//       p {
+//         margin: auto;
+//       }
+
+//       svg {
+//         color: rgba(0, 0, 0, 0.38);
+//       }
+
+//       p {
+//         font-size: 13px;
+//         font-family: font(segoeui);
+//         line-height: 2;
+//         letter-spacing: 0.29px;
+//         text-align: left;
+//         color: rgba(0, 0, 0, 0.87);
+//       }
+//     }
+//   }
+
+//   .table-pagination-item {
+//     min-width: 142px;
+//     height: 100%;
+//     display: flex;
+
+//     .table-pagination-item-text,
+//     button>span {
+//       font-size: 13px;
+//       line-height: 2;
+//       letter-spacing: 0.29px;
+//       text-align: left;
+//       color: rgba(0, 0, 0, 0.87);
+//       font-family: font(segoeui);
+//     }
+
+//     button {
+//       padding: 0;
+
+//       span {
+//         svg {
+//           color: rgba(0, 0, 0, 0.38);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .form-input-select-table-popover {
+//   div[class='MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded'] {
+//     // top: 56px !important;
+
+//     ul {
+//       li {
+//         min-width: 80px;
+//         font-size: 13px;
+//         font-weight: 300;
+//         font-family: font(segoeui);
+//         min-height: 20px;
+//         color: rgba(0, 0, 0, 0.87);
+
+//         &:hover {
+//           background: #f5f5f5;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .form-input-select-table-popover-active {
+//   background: #f5f5f5 !important;
+// }
+
+
+// .form-table-default {
+//   width: 100%;
+//   overflow: auto;
+
+//   table {
+//     width: inherit;
+//     border-collapse: collapse;
+//     background-color: #fff;
+//     thead {
+//       tr {
+//         background-color: #E2E2E2;
+//         th {
+//           font-family: font(SF-Semibold);
+//           font-size: 14px;
+//           line-height: 19px;
+//           letter-spacing: 0.8px;
+//           padding: 22px 20px;
+//           min-height: 20px;
+//           color: #222;
+//           border: 1px solid #D6D6D6;
+//         }
+//       }
+
+//     }
+
+//     tbody {
+//       tr {
+//         outline: 0;
+//         // cursor: pointer;
+
+//         &:hover {
+//           background-color: #D1CFFF;
+//         }
+
+//         .no-hover:hover {
+//           background-color: inherit !important;
+//         }
+
+//         //&:nth-child(even) {
+//         //  background-color: #ededed;
+//         //}
+
+//         &:not(:first-child){
+//           td:not(:nth-child(2)){
+//             border-top: none;
+//           }
+//           td:nth-child(2){
+//             border-left: none;
+//             border-right: none;
+//           }
+//         }
+
+//         &:first-child{
+//           td:nth-child(2){
+//             border-top: none;
+//             border-left: none;
+//             border-right: none;
+//           }
+//         }
+
+//         &:last-child{
+//           td{
+//             border-bottom: none;
+//           }
+//           border-bottom: 1px solid #D6D6D6;
+//         }
+
+//         td {
+//           font-size: 14px;
+//           letter-spacing: 0.7px;
+//           color: #222;
+//           padding: 22px 20px;
+//           border: 1px solid #D6D6D6;
+          
+//           &:nth-child(2){
+//             border-bottom: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .text-center {
+//     text-align: center;
+//   }
+
+//   .text-left {
+//     text-align: left;
+//   }
+
+//   .text-right {
+//     text-align: right;
+//   }
+
+//   @media (max-width: 1024px){
+//     /* Force table to not be like tables anymore */
+//     table:not(.list-card), table:not(.list-card) thead, table:not(.list-card) tbody, table:not(.list-card) th, table:not(.list-card) td, table:not(.list-card) tr {
+//       display: block;
+//     }
+
+//     /* Hide table headers (but not display: none;, for accessibility) */
+//     table:not(.list-card) thead tr {
+//       position: absolute;
+//       top: -9999px;
+//       left: -9999px;
+//     }
+
+//     // tr {
+//     //   margin: 0 0 1rem 0;
+//     // }
+
+//     table:not(.list-card){
+//       tbody{
+//         tr{
+//           td {
+//             /* Behave  like a "row" */
+//             border: none;
+//             border-bottom: 1px solid #eee;
+//             position: relative;
+//             padding-left: 230px;
+//             text-align: left;
+//           }
+
+//           td:before {
+//             /* Now like a table header */
+//             position: absolute;
+//             /* Top/left values mimic padding */
+//             // top: 0;
+//             left: 6px;
+//             width: 5%;
+//             padding-right: 10px;
+//             white-space: nowrap;
+//             /*
+//             Label the data
+//             You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+//             */
+//             content: attr(data-label);
+//             font-family: font(SF-Semibold);
+//           }
+
+
+//           td:first-child {
+//             background: #E2E2E2;
+//           }
+//         }
+//       }
+//     }
+
+//     table:not(.list-card) .text-center {
+//       padding-left: 0;
+//     }
+//   }
+// }

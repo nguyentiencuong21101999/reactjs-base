@@ -1,0 +1,190 @@
+.field{
+    position: relative;
+
+    .field-label {
+      font-size: 16px;
+      line-height: 1.17;
+      letter-spacing: 1.26px;
+      color: #2e2e2e;
+      margin-bottom: 12px;
+    }
+
+    .input-base {
+      position: relative;
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d8d8d8;
+      background-color: #f8f8f8;
+      display: flex;
+      box-sizing: border-box;
+      &.disabled{
+        border-color: #D6D6D6;
+        pointer-events: none;
+        & > .adorment{
+          background-color: #E1E1E1;
+        }
+      }
+      &:focus-within {
+        border-color: #5B56E8;
+        //box-shadow: 0 0 0 2px rgba(0,211,237, 0.5);
+      }
+      & > input, & > textarea {
+        width: 100%;
+        padding: 15px 20px;
+        border: 0;
+        margin: 0;
+        display: block;
+        min-width: 0;
+        background: #FFFFFF;
+        box-sizing: content-box;
+        font-size: 16px;
+        line-height: 1.17;
+        letter-spacing: 0.9px;
+        color: #222222;
+        &:focus {
+          outline: 0;
+        }
+        &:disabled{
+          color: #777777;
+          cursor: no-drop;
+          background-color: #E1E1E1;
+        }
+      }
+
+      .adorment{
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+      }
+
+      &.input-error {
+        border-color: #D50000;
+        background-color: #FFD8D8;
+        &:focus-within {
+          border-color: #D50000;
+          box-shadow: 0 0 0 2px rgba(198,0,0, 0.5);
+        }
+      }
+
+      &::-webkit-input-placeholder { /* Edge */
+        color: #ACACAC;
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #ACACAC;
+      }
+
+      &::placeholder {
+        color: #ACACAC;
+      }
+    }
+
+    .textarea{
+      height: auto;
+      min-height: 60px;
+      width: max-content;
+      max-width: 100%;
+      min-width: 100%;
+      & > textarea{
+        height: auto;
+        resize: none;
+        border-radius: 4px;
+      }
+    }
+
+    .select-base{
+        position: relative;
+
+        &.select-disable{
+          pointer-events: none;
+          cursor: no-drop;
+          opacity: 0.6;
+        }
+
+        .select-value{
+          border: 0;
+          box-sizing: border-box;
+          height: 48px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          border-radius: 4px;
+          padding: 15px 20px;
+          background-color: #ffffff;
+          color: #2e2e2e;
+          .select-txt{
+            font-size: 16px;
+            letter-spacing: 1.26px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          .select-icon{
+            position: absolute;
+            right: 0;
+          }
+          &:focus{
+            outline: 0;
+          }
+        }
+      .fade-in{
+        display: block!important;
+        opacity: 1!important;
+      }
+      .menu{
+        list-style: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 4px 4px;
+        background-color: #fff;
+        z-index: 100;
+        display: none;
+        opacity: 0;
+        border: 1px solid #D6D6D6;
+        box-sizing: border-box;
+        .option{
+          padding: 15px 20px;
+          display: flex;
+          align-items: center;
+          transition: all 0.2s linear;
+          font-size: 16px;
+          letter-spacing: 0.8px;
+          color: #2e2e2e;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          &:hover,&.active{
+            cursor: pointer;
+            color: #5B56E8;
+          }
+        }
+      }
+      .popover{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+      }
+    }
+
+    .helper-text{
+      font-size: 16px;
+      line-height: 1.38;
+      letter-spacing: 1.33px;
+      text-align: left;
+      color: #2e2e2e;
+    }
+    .field-error{
+      line-height: 19px;
+      height: 19px;
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      color: #D50000;
+    }
+  }
+
+

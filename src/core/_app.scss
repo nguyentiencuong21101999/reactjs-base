@@ -1,0 +1,58 @@
+@import './common/fonts';
+@import './common/variables';
+@import './common/mixin';
+@import './common/function';
+@import "./common/animation";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto-Regular';
+}
+
+body{
+  background-color: #FCFCFC;
+}
+
+.pointer-none {
+  pointer-events: none;
+  cursor: none;
+}
+
+.chip {
+  border-radius: 4px;
+  padding: 4px 15px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &.success {
+    background-color: #16A5C6;
+  }
+
+  &.warning {
+    background-color: #F47A00;
+  }
+
+  &.error {
+    background-color: #C50000;
+  }
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+@import './input/input';
+@import './button/button';
+@import './table/table';
+@import "./upload/upload";
+@import "./filter/filter";
+
+@import '../component/layout/dialog/dialog';
+

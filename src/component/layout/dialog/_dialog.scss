@@ -1,0 +1,129 @@
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pu-over {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .pu-close {
+    position: absolute;
+    top: 0;
+    padding: 13px;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  .wrapper {
+    position: absolute;
+    background-color: white;
+    max-width: 580px;
+    width: calc(100% - 16px);
+    border-radius: 4px;
+    opacity: 0;
+    z-index: 2;
+    padding: 40px;
+    box-sizing: border-box;
+
+    .head {
+      border-radius: 8px;
+      text-align: center;
+
+      &>img {
+        width: 118px;
+        height: 118px;
+        object-fit: contain;
+      }
+
+      &>figcaption {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        text-transform: uppercase;
+        font-family: font(SF-Semibold);
+        white-space: pre-line;
+      }
+
+      &>figcaption.primary {
+        color: #0093E2;
+      }
+
+      &>figcaption.secondary {
+        color: #C60000;
+      }
+      &>figcaption.third {
+        color: #FF5D16;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #0093E2;
+      font-family: 'SF-Semibold';
+      margin-bottom: 40px;
+      margin-top: 25px;
+    }
+
+    .content {
+      .typography {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #2e2e2e;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        white-space: pre-line;
+        font-family: 'SF-Regular';
+      }
+    }
+
+    @media (max-width: 599px) {
+      padding: 30px;
+    }
+  }
+
+  .grp-btn {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 599px) {
+      justify-content: space-between;
+    }
+  }
+
+}
+
+
+.bg-in {
+  transition: background-color 0.2s ease-in;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.bg-out {
+  transition: background-color 0.2s ease-out;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fade-in {
+  animation: fade_in 0.2s linear forwards;
+}
+
+.fade-out {
+  animation: fade_out 0.2s linear forwards;
+}
